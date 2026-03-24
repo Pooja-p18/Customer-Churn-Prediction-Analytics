@@ -1,82 +1,140 @@
-# Customer Churn Prediction Analytics
+# 📊 Customer Churn Prediction Analytics
 
-**End-to-end machine learning project predicting customer churn using classification algorithms.**  
-Includes data preprocessing, feature engineering, model training, evaluation, and dashboard visualization.
+## 🚀 Project Overview
 
----
-
-## Project Overview
-
-Customer churn prediction helps companies identify which customers are likely to leave a service.  
-Predicting churn allows companies to take preventive actions and retain valuable customers.
-
-- Problem Type: **Classification**  
-- Target Variable: `Churn` (Yes / No)  
-- Tools & Libraries: `Python`, `Pandas`, `NumPy`, `Scikit-learn`, `Matplotlib`, `Seaborn`, `Streamlit`  
+This project focuses on predicting customer churn using machine learning techniques.
+The goal is to identify customers who are likely to leave a service so that businesses can take proactive actions to retain them.
 
 ---
 
-## Folder Structure
+## 🎯 Objective
+
+* Analyze customer data to understand churn behavior
+* Build and compare machine learning models
+* Identify key factors influencing customer churn
+* Provide actionable business insights
+
+---
+
+## 📂 Dataset
+
+* **Source**: IBM Telco Customer Churn Dataset
+* **Records**: 7043 customers
+* **Features**: Customer demographics, services, billing, and usage patterns
+
+---
+
+## 🛠️ Tech Stack
+
+* **Programming Language**: Python
+* **Libraries**: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn
+* **Tools**: Jupyter Notebook, Git, GitHub
+
+---
+
+## 📊 Project Workflow
+
+### 1️⃣ Data Exploration
+
+* Checked data types and missing values
+* Analyzed class imbalance
+* Visualized key patterns and distributions
+
+---
+
+### 2️⃣ Data Preprocessing
+
+* Handled missing values
+* Converted categorical variables to numerical
+* Removed irrelevant columns
+* Cleaned and structured dataset
+
+---
+
+### 3️⃣ Feature Engineering
+
+* Created new features:
+
+  * `tenure_group`
+  * `avg_charges`
+  * `charge_ratio`
+  * `engagement_score`
+* Improved model performance with meaningful features
+
+---
+
+### 4️⃣ Model Training
+
+* Logistic Regression (Baseline Model)
+* Random Forest Classifier
+
+---
+
+### 5️⃣ Model Evaluation
+
+* Accuracy, Precision, Recall, F1-score
+* Confusion Matrix
+* ROC Curve & AUC Score
+
+📈 Results:
+
+* Logistic Regression AUC: **0.96**
+* Random Forest AUC: **0.97** (Best Model)
+
+---
+
+## 🔍 Key Insights
+
+* Customers with **high monthly charges** are more likely to churn
+* Customers with **low tenure** (new users) have higher churn rates
+* **High charge ratio** indicates higher churn probability
+* Customers using **electronic check payments** churn more
+* Higher **engagement and CLTV** reduce churn risk
+
+---
+
+## 🏆 Conclusion
+
+Random Forest performed the best with high accuracy and AUC score, demonstrating strong capability in identifying churn patterns.
+The model can help businesses take proactive actions to improve customer retention.
+
+---
+
+## 📁 Project Structure
+
+```
 Customer-Churn-Prediction-Analytics/
+│── data/
+│   ├── raw/
+│   ├── cleaned_churn_data.csv
+│   ├── featured_churn_data.csv
 │
-├── data/ # Original and cleaned datasets
-│ └── churn_data.csv
+│── notebooks/
+│   ├── 01_data_exploration.ipynb
+│   ├── 02_data_preprocessing.ipynb
+│   ├── 03_feature_engineering.ipynb
+│   ├── 04_model_training.ipynb
+│   ├── 05_model_evaluation.ipynb
+│   ├── 06_feature_importance.ipynb
 │
-├── notebooks/ # Jupyter notebooks
-│ ├── 01_data_exploration.ipynb
-│ ├── 02_data_preprocessing.ipynb
-│ ├── 03_feature_engineering.ipynb
-│ └── 04_model_training.ipynb
-│
-├── scripts/ # Python scripts
-│ ├── preprocess.py
-│ ├── train_model.py
-│ └── evaluate_model.py
-│
-├── models/ # Saved trained model
-│ └── churn_model.pkl
-│
-├── dashboard/ # Streamlit / Dash app
-│ └── churn_dashboard.py
-│
-├── requirements.txt # Python dependencies
-└── README.md
-
+│── README.md
+│── requirements.txt
+```
 
 ---
 
-## 🔹 Features
+## 💡 Future Improvements
 
-- Data cleaning & preprocessing  
-- Handling missing values & categorical encoding  
-- Feature engineering (tenure, monthly charges, etc.)  
-- Classification models: Logistic Regression, Random Forest, XGBoost  
-- Model evaluation: Accuracy, Precision, Recall, F1-score, Confusion Matrix  
-- Feature importance visualization  
-- Interactive **dashboard** for predicting churn probability  
+* Hyperparameter tuning
+* Deploy model using Flask/Streamlit
+* Build interactive dashboard
+* Try advanced models (XGBoost, LightGBM)
 
 ---
 
-## 🔹 Installation
+## 🙌 Author
 
-1. Clone the repository:
+**Pooja Parashuram Bajantri**
+Aspiring Data Scientist | Python | Machine Learning
 
-```bash
-git clone https://github.com/your-username/Customer-Churn-Prediction-Analytics.git
-cd Customer-Churn-Prediction-Analytics
-
-Install dependencies:
-
-pip install -r requirements.txt
-
-🔹 How to Run the Dashboard
-streamlit run dashboard/churn_dashboard.py
-
-Dataset
-
-Dataset: Telco Customer Churn Dataset (Kaggle)
-Columns include: customerID, gender, SeniorCitizen, Partner, Dependents, tenure, MultipleLines, InternetService, OnlineSecurity, MonthlyCharges, TotalCharges, Churn
-
-Author
-
-Pooja Parashuram Bajantri – Data Science Enthusiast / Aspiring Data Engineer
+---
